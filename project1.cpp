@@ -127,7 +127,7 @@ public:
     // Person management
     int findPerson(const string &lastName) const 
     {
-        
+        int       
     };
     
     // Command handlers
@@ -163,11 +163,6 @@ public:
 
     };
 };
-
-
-
-
-
 
 
 
