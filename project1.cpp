@@ -127,13 +127,23 @@ public:
     // Person management
     int findPerson(const string &lastName) const 
     {
-        int       
+        for (int i = 0; i < numPersons; i++) {
+            if (persons[i].lastName == lastName)
+                return i;
+        }
+        return -1;  
     };
     
     // Command handlers
     void addPost(const string &posterLastName, int messageId, const string &date, const string &time, const string &message) 
     {
-
+        Post p;
+        p.posterLastName = posterLastName;
+        p.messageId = messageId;
+        p.date = date;
+        p.time = time;
+        p.message = message;
+        p.isDeleted = false;
     };
     
     void deletePost(const string &posterLastName, int messageId) 
